@@ -3,7 +3,6 @@ if not status_ok then
     return
 end
 
--- Indent-blankline configuration
 indent_blankline.setup({
     char = "▏",
     buftype_exclude = { "terminal", "nofile" },

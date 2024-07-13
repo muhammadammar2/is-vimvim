@@ -5,11 +5,11 @@ end
 
 gitsigns.setup {
   signs = {
-    add = { hl = "GitSignsAdd", text = "+ ", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-    change = { hl = "GitSignsChange", text = "~ ", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-    delete = { hl = "GitSignsDelete", text = "❌", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    topdelete = { hl = "GitSignsDelete", text = "❌", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    changedelete = { hl = "GitSignsChange", text = "~ ", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+    add = { text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+    change = { text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+    delete = { text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+    topdelete = { text = "‾", numhl = "GitSignsTopdeleteNr", linehl = "GitSignsTopdeleteLn" },
+    changedelete = { text = "~", numhl = "GitSignsChangedeleteNr", linehl = "GitSignsChangedeleteLn" },
   },
   signcolumn = true,
   numhl = false,
@@ -27,7 +27,6 @@ gitsigns.setup {
     delay = 1000,
     ignore_whitespace = false,
   },
-  -- Remove deprecated current_line_blame_formatter_opts
   sign_priority = 6,
   update_debounce = 100,
   status_formatter = nil,
@@ -38,9 +37,6 @@ gitsigns.setup {
     relative = "cursor",
     row = 0,
     col = 1,
-  },
-  yadm = {
-    enable = false,
   },
 }
 
