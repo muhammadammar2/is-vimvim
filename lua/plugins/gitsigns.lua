@@ -1,4 +1,3 @@
-
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
   return
@@ -46,6 +45,9 @@ gitsigns.setup {
 }
 
 -- Add highlight definitions
+vim.api.nvim_set_hl(0, 'GitSignsAdd', { link = 'DiffAdd' })
+vim.api.nvim_set_hl(0, 'GitSignsAddLn', { link = 'DiffAdd' })
+vim.api.nvim_set_hl(0, 'GitSignsAddNr', { link = 'DiffAdd' })
 vim.api.nvim_set_hl(0, 'GitSignsChange', { link = 'DiffChange' })
 vim.api.nvim_set_hl(0, 'GitSignsChangeLn', { link = 'DiffChange' })
 vim.api.nvim_set_hl(0, 'GitSignsChangeNr', { link = 'DiffChange' })
@@ -58,3 +60,4 @@ vim.api.nvim_set_hl(0, 'GitSignsDeleteNr', { link = 'DiffDelete' })
 vim.api.nvim_set_hl(0, 'GitSignsTopdelete', { link = 'DiffDelete' })
 vim.api.nvim_set_hl(0, 'GitSignsTopdeleteLn', { link = 'DiffDelete' })
 vim.api.nvim_set_hl(0, 'GitSignsTopdeleteNr', { link = 'DiffDelete' })
+
