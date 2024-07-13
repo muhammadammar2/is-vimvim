@@ -4,12 +4,12 @@ if not null_ls_status_ok then
 end
 
 null_ls.setup {
-  on_attach = function(client)
-    if client.resolved_capabilities.document_formatting then
+  on_attach = function(client, bufnr)
+    if client.server_capabilities.documentFormattingProvider then
       vim.cmd([[
         augroup LspFormatting
             autocmd! * <buffer>
-            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()
+            autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ bufnr = bufnr })
         augroup END
       ]])
     end
@@ -22,3 +22,4 @@ null_ls.setup {
     null_ls.builtins.formatting.rustfmt,
   },
 }
+
