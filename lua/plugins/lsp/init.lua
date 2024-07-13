@@ -24,3 +24,8 @@ vim.api.nvim_set_hl(0, 'GitSignsTopdelete', { link = 'DiffDelete' })
 vim.api.nvim_set_hl(0, 'GitSignsTopdeleteLn', { link = 'DiffDelete' })
 vim.api.nvim_set_hl(0, 'GitSignsTopdeleteNr', { link = 'DiffDelete' })
 
+-- Enable line numbers
+vim.opt.number = true
+-- Enable relative line numbers
+vim.opt.relativenumber = true
+
